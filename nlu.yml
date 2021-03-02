@@ -1,0 +1,185 @@
+version: "2.0"
+nlu:
+#- intent: chao_ten
+#  examples: |
+#    - [Anh](cust_sex) là [Thắng](cust_name)
+#    - [Anh](cust_sex) là [Thọ](cust_name)
+#    - [Anh](cust_sex) là [Hiếu](cust_name)
+#    - [Anh](cust_sex) là [Hùng](cust_name)
+#    - [Chị](cust_sex) là [Linh](cust_name)
+#    - [Chị](cust_sex) là [Thảo](cust_name)
+#    - [Chị](cust_sex) là [Phương](cust_name)
+#    - [Chị](cust_sex) là [Ly](cust_name)
+
+- intent: chao
+  examples: |
+    - xin chào
+    - chào bạn
+    - hello
+    - hi
+    - hey
+    - mình có vài câu hỏi
+    - có ai giúp mình không
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - cháu ơi
+    - hello
+    - chào
+    - hi
+    - có ai ở đây không?
+- intent: tam_biet
+  examples: |
+    - tạm biệt
+    - chào tạm biệt
+    - chào tạm biệt em
+    - tạm biệt em
+    - tạm biệt em nhé
+
+- intent: xac_nhan
+  examples: |
+    - Vâng
+    - y
+    - đồng ý
+    - tất nhiên
+    - hay đấy
+    - chính xác
+
+- intent: cam_on
+  examples: |
+    - chuẩn
+    - hay
+    - siêu
+    - tuyệt
+    - cám ơn
+    - thanks
+    - thank you
+    - ok
+    - cảm ơn em
+    - cảm ơn em nhiều nhé
+    - cảm ơn
+
+- intent: ask_func_list
+  examples: |
+    - bạn có thể làm được những gì
+    - bạn giúp được gì nào
+    - chức năng của bạn là gì
+    - bạn có thể làm được mấy chức năng
+    - bạn giỏi nhất làm gì
+    - bạn có tư vấn giúp mình được không
+    - việc gì bạn làm được
+    - kể xem bạn làm được gì
+    - cho mình biết bạn làm được gì nhé
+    - bạn hữu dụng như thế nào
+    - bạn có ích trong những việc gì
+    - lĩnh vực gì bạn giỏi nhất
+    - mình tò mò về những việc bạn làm được
+    - chẳng biết bạn làm được gì
+    - bạn tệ nhất trong việc gì
+    - bạn biết được những lĩnh vực gì
+    - bạn giỏi hỗ trợ nhất trong lĩnh vực gì
+    - kể cho mình biết những việc bạn có thể làm được nhé
+    - nói cho mình về những việc bạn giúp được mình
+    - bạn giúp được mình gì nào
+    - bạn có thể làm gì
+    - em giúp được gì
+    - em làm được gì
+    - mày biết làm gì
+    - em biết làm gì
+    - bạn biết làm gì
+    - biết làm gì
+    - làm được gì
+    - có làm được gì
+    - có làm được trò gì
+    - giúp giúp cái gì
+    - biết gì mà nói
+    - làm được gì
+    - giúp được gì
+    - mày làm được gì
+    - có biết gì
+
+- intent: phu_nhan #phủ nhận
+  examples: |
+    - không
+    - ko
+    - không bao giờ
+    - tôi không nghĩ vậy
+    - tôi không thích đấy...
+    - không đời nào
+    - không ổn
+
+- intent: tam_trang_tuyet_voi
+  examples: |
+    - tuyệt vời
+    - tốt
+    - rất tốt
+    - rất đỉnh
+    - tôi cảm thấy rất tuyệt
+    - tôi cảm thấy tốt
+    - tôi cảm thấy rất tốt
+    - tôi sẽ cứu thế giời
+    - rất rất hoàn hảo
+    - rất tốt
+    - hoàn toản
+
+- intent: tam_trang_toi_te
+  examples: |
+    - ngày của tôi thật kinh khủng
+    - tôi buồn
+    - tôi cảm thấy không tốt lắm
+    - tôi không thích hợp
+    - siêu buồn
+    - tôi rất buồn
+    - buồn
+    - rất buồn
+    - không vui
+    - không ổn
+    - rất không ổn
+    - rất rất... buồn
+
+- intent: ask_name
+  examples: |
+    - bạn tên gì
+    - tên gì
+    - chị tên gì
+    - anh tên gì
+    - tên của bạn là gì
+    - tên của chị là gì
+    - tên của anh là gì
+    - cho mình hỏi tên nhé
+    - mình muốn biết tên bạn
+    - mình muốn tiện xưng hộ hơn, cho mình biết tên nhé
+    - để tiện xưng hộ thì tên bạn là gì
+    - cho em xin tên của anh ạ
+    - cho em xin tên của chị ạ
+    - được biết tên bạn thì tốt nhỉ
+    - vui lòng cho mình biết tên nhé
+    - xin phép hỏi tên của bạn
+    - vậy thì tên bạn là gì
+    - tên bạn trong tiếng việt là gì
+    - bạn có vui lòng cho mình biết tên được không
+    - chúng ta nên biết tên nhau nhỉ?
+    - em tên là gì thế
+    - tên em là gì
+    - tên em
+    - tên bạn
+    - bạn tên là gì
+    - bạn tên gì thế
+    - em tên gì
+
+- intent: thu_thach_bot
+  examples: |
+    - bạn có phải là bot không?
+    - bạn là con người à?
+    - tôi đang nói chuyện với một con bot?
+    - tôi đang nói chuyện với một con người?
+
+- intent: hoi_ban_gi
+  examples: |
+    - nhà mình bán cái gì vậy ạ?
+    - mình có thể mua gì ở đây?
+    - có những mặt hàng nào?
+    - mình chưa biết mua cái gì?
+    - mình mua cả cửa hàng này?
+    - bạn tư vấn cho mình được không?
+    - mua gì bây giờ nhỉ

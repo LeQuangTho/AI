@@ -1,0 +1,71 @@
+version: "2.0"
+
+intents:
+  - chao
+  - tam_biet
+  - xac_nhan
+  - cam_on
+  - ask_func_list
+  - phu_nhan
+  - tam_trang_tuyet_voi
+  - tam_trang_toi_te
+  - ask_name
+  - thu_thach_bot
+  - hoi_ban_gi
+
+
+slot:
+  cust_sex:
+    type: text
+  cust_name:
+    type: text
+
+responses:
+  utter_chao_ten:
+  - text: "Dạ! Chào {cust_sex} {cust_name} ạ. Thor có thể giúp gì cho {cust_sex} ạ?"
+
+  utter_chao:
+  - text: "Hey! Bạn ổn chứ?"
+
+  utter_co_vu: #cổ vũ tinh thần.
+  - text: "Đây là một cái gì đó để bạn vui lên :"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_hoi_giup_gi:
+  - text: "Bạn cần giúp gì nào?"
+
+  utter_vui:
+  #- text: "Great, carry on!"
+  - text: "Xin chào bạn! Tôi có thể giúp gì cho bạn?"
+
+  utter_tam_biet:
+  - text: "Bye"
+  - text: "Xin chào! Hẹn gặp lại"
+
+  utter_iamabot:
+  - text: "Tôi là bot, nguồn từ Rasa."
+  utter_ask_name:
+    - text: "Em họ Bank, tên Bot! Người ta hay gọi em là Bank Bot thông minh xinh đẹp giỏi giang nhất vũ trụ ạ! Quý khách cần trợ giúp gì ạ?"
+    - text: "Dạ thưa. Tên Tiếng Việt của em là Trợ lý ảo Ngân hàng nhưng em thích gọi bằng tên Tiếng Anh là Bank Bot cho nó Tây!"
+  utter_unclear:
+    - text: "Thưa quý khách, hiện tại tôi chưa hiểu được yêu cầu của Quý khách. "
+
+  utter_hoi_ban_gi:
+    - text: "Dạ bên em có các loại sản phẩm như:
+                - cơm chó
+                - bánh dinh dưỡng
+                - thịt gà
+                - thịt chó
+                - thịt mèo"
+#  actions:
+#  # templates (as they are reply actions),
+#  # also custom actions if any
+#   - utter_greet
+#   - utter_bye
+#   - utter_unclear
+#   - utter_func_list
+#   - utter_thank
+#   - utter_ask_name
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

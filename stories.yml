@@ -1,0 +1,45 @@
+version: "2.0"
+
+stories:
+
+- story: đường vui vẻ
+  steps:
+  - intent: chao
+  - action: utter_chao
+  - intent: tam_trang_tuyet_voi
+  - action: utter_vui
+
+- story: sad path 1
+  steps:
+  - intent: chao
+  - action: utter_chao
+  - intent: tam_trang_toi_te
+  - action: utter_co_vu
+  - action: utter_hoi_giup_gi
+  - intent: xac_nhan
+  - action: utter_vui
+
+- story: sad path 2
+  steps:
+  - intent: chao
+  - action: utter_chao
+  - intent: tam_trang_toi_te
+  - action: utter_co_vu
+  - action: utter_hoi_giup_gi
+  - intent: phu_nhan
+  - action: utter_tam_biet
+
+- story: sad path 1
+  steps:
+  - intent: chao
+  - action: utter_chao
+  - intent: hoi_ban_gi
+  - action: utter_hoi_ban_gi
+  - intent: tam_biet
+  - action: utter_tam_biet
+#câu chuyện đầu tiên của Thọ
+#- story: happy path
+#  steps:
+#  - intent: chao_ten
+#  - action: utter_chao_ten
+
