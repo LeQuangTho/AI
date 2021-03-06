@@ -1,71 +1,141 @@
 version: "2.0"
 
 intents:
-  - chao
+  - chao_hoi
   - tam_biet
-  - xac_nhan
+  - dong_y
+  - tu_choi
+  - khen_ngoi #5
+  - yeu_cau_chung
+  - san_pham
+  - cong_dung
+  - chong_chi_dinh
+  - huong_dan_su_dung #10
+  - xuat_su
+  - thanh_phan_dinh_duong
+  - cong_nghe_san_xuat
+  - san_pham_kem_theo
+  - han_su_dung #15
+  - huong_vi
+  - uu_dai
+  - bao_hanh
+  - nhan_biet_hang_that
+  - gia #20
+  - giao_hang
+  - doi_tuong
+  - ho_ten
+  - tuoi
+  - so_dien_thoai #25
+  - nhu_cau_su_dung
+  - gioi_tinh
   - cam_on
-  - ask_func_list
-  - phu_nhan
-  - tam_trang_tuyet_voi
-  - tam_trang_toi_te
-  - ask_name
-  - thu_thach_bot
-  - hoi_ban_gi
 
+entities:
+- ten_san_pham
+- ma_san_pham
 
-slot:
-  cust_sex:
+slots:
+  ma_san_pham:
     type: text
-  cust_name:
+    influence_conversation: false
+  ten_san_pham:
     type: text
+    influence_conversation: false
 
 responses:
-  utter_chao_ten:
-  - text: "Dạ! Chào {cust_sex} {cust_name} ạ. Thor có thể giúp gì cho {cust_sex} ạ?"
-
-  utter_chao:
-  - text: "Hey! Bạn ổn chứ?"
-
-  utter_co_vu: #cổ vũ tinh thần.
-  - text: "Đây là một cái gì đó để bạn vui lên :"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_hoi_giup_gi:
-  - text: "Bạn cần giúp gì nào?"
-
-  utter_vui:
-  #- text: "Great, carry on!"
-  - text: "Xin chào bạn! Tôi có thể giúp gì cho bạn?"
-
+#1
+  utter_chao_hoi:
+  - text: "Tôi có thể giúp gì cho bạn?"
+#2
   utter_tam_biet:
   - text: "Bye"
-  - text: "Xin chào! Hẹn gặp lại"
+#3
+  utter_dong_y:
+  - text: "OK !!!"
+#4
+  utter_tu_choi:
+    - text: "Tại sao thế?"
+#5
+  utter_khen_ngoi:
+  - text: ""
+#6
+  utter_yeu_cau_chung:
+  - text: "Đây là thông tin về sản phẩm {ma_san_pham}:..."
+#7
+  utter_san_pham:
+  - text: ""
+#8
+  utter_cong_dung:
+  - text: "Công dụng của sản phẩm {ma_san_pham}, {ten_san_pham} là:..."
+#9
+  utter_chong_chi_dinh:
+  - text: "Khi sử dụng sản phẩm cần lưu ý:..."
+#10
+  utter_huong_dan_su_dung:
+  - text: "Hướng dẫn sử dụng của sản phẩm {ma_san_pham} là:..."
+#11
+  utter_xuat_su:
+  - text: "Sản phẩm này có xuất sứ ở "
+#12
+  utter_thanh_phan_dinh_duong:
+  - text: "Thành phần dinh dưỡng của sản phẩm"
+#13
+  utter_cong_nghe_san_xuat:
+  - text: "Sản phẩm được sản xuất bằng công nghệ ..."
+#14
+  utter_san_pham_kem_theo:
+  - text: "Một số sản phẩm dùng kèm theo để đạt hiệu quả tốt nhất"
+#15
+  utter_han_su_dung:
+  - text: "Hạn sử dụng 36 tháng kể từ ngày sản xuất ghi trên bai bì sản phẩm. Hạn dùng sau khi mở nắp là 2 tháng"
+#16
+  utter_huong_vi:
+  - text: "Sản phẩm có các hương vị: Trà xanh, dâu,..."
+#17
+  utter_uu_dai:
+  - text: "Hiện sản phẩm đang có chương trình khuyến mại mua 2 tặng 1 hộp cốc ly"
+#18
+  utter_bao_hanh:
+  - text: "Sản phẩm được phép đổi trả trong vòng 36 tiếng"
+#19
+  utter_nhan_biet_hang_that:
+  - text: "Sản phẩm chính hãng sẽ có tem chống hàng giả với 1 số đặc điểm riêng"
+#20
+  utter_gia:
+  - text: "Giá của sản phẩm là xxx VNĐ"
+#21
+  utter_giao_hang:
+  - text: "Bạn có thể đến cửa hàng mua trực tiếp hoặc đặt hàng qua Internet thông qua ứng dụng Shoppe"
+#22
+  utter_doi_tuong:
+  - text: "Vui lòng cho biết 1 số thông tin về người sử dụng sản phẩm!(Tên, giới tính, tuổi, mục địch)"
+#23
+  utter_ho_ten:
+  - text: "Vui lòng cho biết tên của bạn!"
+#24
+  utter_tuoi:
+  - text: "Vui lòng cho biết tuổi của bạn!"
+#25
+  utter_so_dien_thoai:
+  - text: "Vui lòng cho biết số điện thoại!"
+#26
+  utter_nhu_cau_su_dung:
+  - text: "Vui lòng cho biết mục đích sử dụng sản phẩm của bạn!"
+#27
+  utter_gioi_tinh:
+  - text: "Bạn là nam hay nữ"
+#28
+  utter_cam_on:
+  - text: "Không có gì!!!"
+#29
+  utter_i_am_a_chatbot:
+  - text: "Xin chào! Tôi là ChatBot."
 
-  utter_iamabot:
-  - text: "Tôi là bot, nguồn từ Rasa."
-  utter_ask_name:
-    - text: "Em họ Bank, tên Bot! Người ta hay gọi em là Bank Bot thông minh xinh đẹp giỏi giang nhất vũ trụ ạ! Quý khách cần trợ giúp gì ạ?"
-    - text: "Dạ thưa. Tên Tiếng Việt của em là Trợ lý ảo Ngân hàng nhưng em thích gọi bằng tên Tiếng Anh là Bank Bot cho nó Tây!"
-  utter_unclear:
-    - text: "Thưa quý khách, hiện tại tôi chưa hiểu được yêu cầu của Quý khách. "
 
-  utter_hoi_ban_gi:
-    - text: "Dạ bên em có các loại sản phẩm như:
-                - cơm chó
-                - bánh dinh dưỡng
-                - thịt gà
-                - thịt chó
-                - thịt mèo"
-#  actions:
-#  # templates (as they are reply actions),
-#  # also custom actions if any
-#   - utter_greet
-#   - utter_bye
-#   - utter_unclear
-#   - utter_func_list
-#   - utter_thank
-#   - utter_ask_name
+actions:
+  - action_hello_world
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

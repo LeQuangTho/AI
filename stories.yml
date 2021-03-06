@@ -2,44 +2,34 @@ version: "2.0"
 
 stories:
 
-- story: đường vui vẻ
+- story: yeu_cau_chung path 1
   steps:
-  - intent: chao
-  - action: utter_chao
-  - intent: tam_trang_tuyet_voi
-  - action: utter_vui
-
-- story: sad path 1
-  steps:
-  - intent: chao
-  - action: utter_chao
-  - intent: tam_trang_toi_te
-  - action: utter_co_vu
-  - action: utter_hoi_giup_gi
-  - intent: xac_nhan
-  - action: utter_vui
-
-- story: sad path 2
-  steps:
-  - intent: chao
-  - action: utter_chao
-  - intent: tam_trang_toi_te
-  - action: utter_co_vu
-  - action: utter_hoi_giup_gi
-  - intent: phu_nhan
-  - action: utter_tam_biet
-
-- story: sad path 1
-  steps:
-  - intent: chao
-  - action: utter_chao
-  - intent: hoi_ban_gi
-  - action: utter_hoi_ban_gi
+  - intent: chao_hoi
+  - action: utter_i_am_a_chatbot
+  - action: utter_chao_hoi
+  - intent: yeu_cau_chung
+  - action: utter_yeu_cau_chung
   - intent: tam_biet
   - action: utter_tam_biet
-#câu chuyện đầu tiên của Thọ
-#- story: happy path
-#  steps:
-#  - intent: chao_ten
-#  - action: utter_chao_ten
 
+- story: treu_dua path 1
+  steps:
+  - intent: chao_hoi
+  - action: utter_i_am_a_chatbot
+  - action: utter_chao_hoi
+  - intent: tam_biet
+  - action: utter_tam_biet
+
+- story: yeu_cau_chi_tiet path 1
+  steps:
+  - intent: chao_hoi
+  - action: utter_i_am_a_chatbot
+  - action: utter_chao_hoi
+  - intent: cong_dung
+  - action: action_hello_world
+  - intent: huong_dan_su_dung
+  - action: utter_huong_dan_su_dung
+  - intent: chong_chi_dinh
+  - action: utter_chong_chi_dinh
+  - intent: tam_biet
+  - action: utter_tam_biet
